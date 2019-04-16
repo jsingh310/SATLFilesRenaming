@@ -1,10 +1,10 @@
 import os
 
-os.chdir('C:\\Users\\Jasvinder Singh\\Desktop\\ALL_PSV_FILES2')
+os.chdir('C:\\Users\\Jasvinder Singh\\Desktop\\ALL_PSV_FILES2') #change the directory
 
-cc = input("What is the country code?")
+cc = input("What is the country code?") #input for what country files you would like to rename
 
-for name in os.listdir('C:\\Users\\Jasvinder Singh\\Desktop\\ALL_PSV_FILES2'):
+for name in os.listdir('C:\\Users\\Jasvinder Singh\\Desktop\\ALL_PSV_FILES2'): #for a specific file in the directory, we would like to rename in the manner below
 
     if name.startswith('GLMA_SATL_MO_Sls_FnCmp_' + str(cc) + '_') and len(name) == 36:
         os.rename(name, name[:26] + '20190408-ETL-' + name[26:])
